@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <title>My Website</title>
+        <style>
+            *{
+                font-family: "Trebuchet MS", Helvetica, sans-serif;
+                padding: 0%;
+                margin: 0%;
+            }
+            html {
+                scroll-behavior: smooth;
+            }
+            .container{
+                width: 100%;
+                height: 700px;
+                background-image: url('https://c4.wallpaperflare.com/wallpaper/838/825/266/5bd3baf5c4a5e-wallpaper-preview.jpg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;  
+                background-size: cover;
+                text-align: center;
+            }
+            ul {
+                font-size: 30px;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+            li {
+                float: left;
+            }
+            li a{
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            p{
+                font-size:20px ;
+                color: white;
+            }
+            #navbar {
+                background-color: rgb(28, 28, 48);
+                position: fixed;
+                top: -50px;
+                width: 100%;
+                display: block;
+                transition: top 0.3s;
+                z-index: 1;
+            }
+
+            #navbar a {
+                float: left;
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 15px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+            #navbar a:hover {
+                background-color: #ddd;
+                color: black;
+            }  
+            .grid-container {
+                padding: 40px;
+                height: 950px;
+                background-color: #222223;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }   
+            .grid-container div h1{
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 50px;
+                color: white;
+            } 
+            .grid-container div img{
+                max-height: 100%;  
+                max-width: 100%; 
+                position: absolute;  
+                top: 0;  
+                bottom: 0;  
+                left: 0;  
+                right: 0;  
+                margin: auto;
+                z-index: 0;
+            }
+            #myBtn {
+                display: none;
+                position: fixed;
+                bottom: 20px;
+                right: 30px;
+                z-index: 99;
+                font-size: 18px;
+                border: none;
+                outline: none;
+                background-color: rgb(28, 28, 48);
+                color: white;
+                cursor: pointer;
+                padding: 15px;
+                border-radius: 4px;
+            }
+
+            #myBtn:hover {
+                background-color: #233B9A;
+            }
+
+        </style>
+    </head>
+    <body>
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="glyphicon glyphicon-chevron-up"></i></button>
+        <div id="navbar">
+            <a href="#home"><span style="color:#9BB1B8;">M</span>y Comp<span style="color:#9BB1B8;">any</span></a>
+            <a href="#" style="float: right;"><i class="fa fa-bars" style="color: white;"></i></a>
+        </div>
+        <div class="container">
+            <br><br>
+            <ul>
+                <li><a href="#home"><span style="color:#9BB1B8;">M</span>y Comp<span style="color:#9BB1B8;">any</span></a></li>
+                <li style="float:right"><a href="#"><i class="fa fa-bars" style="color: white;"></i></a></li>
+            </ul>
+            <br><br><br><br><br><br>
+            <h1 style="color: white;font-size: 50px;">Dark Background Is </h1><br>
+            <h1 style="color: white;font-size: 50px;">a Smart Idea</h1>
+            <br><br><br>
+            <p style="color: white;">Sed tincidunt sapien eu diam rutrum tristique. Praesent ac justo ac lectus</p><br>
+            <p style="color: white;">commodo ullamcorper. Sed facilisis eget elit nec cursus</p>
+        </div>
+        
+        
+        <div class="grid-container">
+
+            <div>
+                <br><br>
+                <p style="color: #3397EB;">About Us</p><br><br>
+                <h1>We are Modren &</h1><br>
+                <h1>special for<span style="color: #3397EB;"> Designing</span></h1>
+                <br><br>
+                <p >Browse our HTML5 responsive agency template below. Quisque
+                    lorem tortor fringilla sed,vestibulum id, eleifend justo bibendum
+                    sapien massa ac turpis faucibus.</p>
+                <br><br><br>
+                <h2 style="color:green;font-size: 30px;">Join for smart business!</h2>
+                <br>
+                <p>Browse our HTML5 responsive agency template below.
+                    Quisque lorem tortor fringilla sed.</p>
+                    <br>
+                <p>
+                <i class="glyphicon glyphicon-th" style="color: #3196EE; padding: 30px;font-size: 30px;float: left;"></i>
+                Browse our HTML5 responsive agency template below. Quisque lorem tortor fringilla sed.</p> 
+                <br><br><br>
+                <p>
+                <i class="glyphicon glyphicon-ok-circle" style="color: #1AC9D1; padding: 30px;font-size: 30px;float: left;"></i>
+                Browse our HTML5 responsive agency template below. Quisque lorem tortor fringilla sed.</p>
+            </div>
+        
+            <div style="position: relative;">
+                <img src="https://html.themexriver.com/onevo/img/about-3-1.png" class="about-image" alt="Awesome Image">
+            </div>
+          
+        </div>
+        
+        
+        
+        
+        
+        <script>
+            window.onscroll = function() {scrollFunction()};
+            
+            function scrollFunction() {
+              if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("navbar").style.top = "0";
+              } else {
+                document.getElementById("navbar").style.top = "-50px";
+              }
+            }
+        </script>
+        <script>
+            var mybutton = document.getElementById("myBtn");
+            
+            window.onscroll = function() {scrollFunction()};
+            
+            function scrollFunction() 
+            {
+              if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)
+                {
+                    mybutton.style.display = "block";
+                } 
+              else 
+                {
+                    mybutton.style.display = "none";
+                }
+            }
+            
+            function topFunction() 
+            {
+              document.body.scrollTop = 0;
+              document.documentElement.scrollTop = 0;
+            }
+        </script>
+    </body>
+</html>
